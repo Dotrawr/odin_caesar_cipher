@@ -15,4 +15,9 @@ and gives this example:
 
 So it seems I need to take a string and shift each character over by the shift factor.
 
-(https://www.theodinproject.com/lessons/ruby-caesar-cipher)
+## caesar.rb
+
+I decided to split the functionality into two methods, the first caesar_cipher to handle splitting the string into characters and converting to byte
+then each byte is passed to a shift_char method that returns the same char if the value is not a-z or A-Z, If a character is between a-z or A-Z it will remove the minimum byte (65 or 97) then add the shift and mod 26 it to calculate if it loops around the alphabet and finally add the initial removed mimimum byte (65 or 97) and convert back character e.g. ```'a' '5' => 'a' => 65 - 65 = 0 + 5 = 5 % 26 = 5 + 65 = 70 => 'f'```
+
+[source](https://www.theodinproject.com/lessons/ruby-caesar-cipher)
