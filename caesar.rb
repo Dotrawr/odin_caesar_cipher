@@ -17,4 +17,8 @@ def shift_char(byte, shift_factor)
   return byte.chr
 end
 
-puts caesar_cipher("What a string!", 5) # => "Bmfy f xywnsl!"
+puts('Please enter a string to encode: ')
+text = gets.chomp
+puts('Please enter a shift value: ')
+shift = gets.chomp.to_i
+puts caesar_cipher(text, shift)
